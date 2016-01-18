@@ -16,7 +16,7 @@ vagrant provision clouder
 
 #installing some prerequiste packages
 vagrant ssh -c "sudo pip install passlib ;\
-get http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb ;\
+wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb ;\
 sudo dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb" clouder
 
 #installing odoo
@@ -32,5 +32,9 @@ sudo pip install -U erppeek" clouder
 vagrant ssh -c "sudo dpkg -i /vagrant/modules/clouderfiles/files/python-paramiko_1.15.2-1_all.deb" clouder
 
 #starting odoo
+vagrant ssh -c "sudo service odoo-server start" clouder
+
+#making sure odoo is started
+vagrant ssh -c "sudo service odoo-server stop" clouder
 vagrant ssh -c "sudo service odoo-server start" clouder
 

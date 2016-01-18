@@ -27,6 +27,7 @@ The ssh-keys in this archive are included for reasons of convenience and ease of
 
 1. Download and install Oracle Virtual Box (download here: https://www.virtualbox.org/wiki/Downloads )
 2. Download and install GitBash (download here: https://git-for-windows.github.io/ )
+	* configure GitBash to check out UNIX-styled line endings (LF) otherwise you will have a problem with the odoo start script and configuration file
 3. Download and install Vagrant (download here: https://www.vagrantup.com/downloads.html )
 4. Install the Vagrant Plugins.	
   1. Open/Start Terminal (Linux / Mac) or e.g. GitBash (Windows)
