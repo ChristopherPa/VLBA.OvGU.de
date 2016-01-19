@@ -38,8 +38,18 @@ The ssh-keys in this archive are included for reasons of convenience and ease of
 6. Start the GitBash and move via the console to the main directory of the downloaded file. (the main directory includes the start.sh !!!)
 7. To install the clouder+docker VM's type the following command in the console:
   * $ ./start.sh	
-The installation begins and takes a few minutes.
-
+	The installation begins and takes a few minutes.
+8. After the installation has completed restart manually the odoo server in the clouder VM.
+  1. Open/Start Terminal (Linux / Mac) or e.g. GitBash (Windows)
+  2. Connect to clouder VM with following command:
+  	* $ vagrant ssh clouder
+  3. Restart odoo server with following commands: 
+  	* $ sudo service odoo-server stop
+  	* $ sudo service odoo-server start
+  4. Exit the VM
+ 
+9. Now connect via the Browser to Clouder (http://clouder.local:8069 or http://192.168.33.10:8069)
+  
 # Usage:
 
 1. cd to the directory containing this file
